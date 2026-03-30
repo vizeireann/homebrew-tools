@@ -1,14 +1,16 @@
 class Retrnote < Formula
-  desc "Minimalist retro-inspired tag-based word processor"
+  desc "Minimalist retro-inspired HTML tag-based word processor"
   homepage "https://github.com/vizeireann/retrnote"
-  url "https://github.com/vizeireann/retrnote/releases/download/0.1.0/retrnote"
-  sha256 "a6f1eb68b957eaa24ff9d2156314774a34b49abaa797c0aa5a2392270c12521a"
+  url "https://github.com/vizeireann/retrnote/releases/download/0.1.1/retrnote-macos-latest"
+  sha256 "6479df79519c86a4b7b0a85643187939b811a9d6e5ec41013461de65e64c4b21"
 
   def install
-    bin.install "retrnote"
+    # Install the self-contained binary
+    bin.install "retrnote-macos-latest" => "retrnote"
   end
 
   test do
+    # Verify that the CLI runs
     system bin/"retrnote", "--help"
   end
 end
