@@ -5,7 +5,7 @@ class Retrnote < Formula
   sha256 "a85ac7861463c59f2cb2c35d62056901611afd9afdfd93a12ef9ea82dc3c4c0a"
 
   def install
-    system "unzip","retrnote-macos-latest.zip"
+    system "unzip", cached_download
     bin.install "retrnote-macos-latest" => "retrnote"
   end
 
